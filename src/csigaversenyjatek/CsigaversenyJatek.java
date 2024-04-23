@@ -1,16 +1,21 @@
 
 package csigaversenyjatek;
 
+import java.util.Scanner;
+
 
 public class CsigaversenyJatek {
-
+    
+    Scanner sc = new Scanner(System.in);
+    
     public CsigaversenyJatek(){
-        start();
+        //start();
     }
     
     void start(){
+        jatekKezdes();
         fogadasCsigara();
-        fogadasEredmeny();
+        fogadasEredmeny(eredmeny, fogad);
         palya();
         gyorsitoKiszamol();
         gyorsitasAllito();
@@ -20,15 +25,28 @@ public class CsigaversenyJatek {
         kiIr("");
     }
     
+    private void jatekKezdes() {
+        kiIr("A játék elkezdödött... ");
+    }
+    
     private String fogadasCsigara() {
+        kiIr("Szerinted melyik csiga fog nyerni?(P/K/Z): ");
+        String fogad = sc.nextLine();
         
-        return null;
-        
+        return fogad;
     }
 
-    private boolean fogadasEredmeny() {
-        
-        return false;
+    private String fogadasEredmeny(String eredmeny, String fogad) {
+        if(fogad == "kek"){
+            eredmeny = "eltaláltad";
+        }else if(fogad == "zold"){
+            eredmeny = "eltaláltad";
+        }else if(fogad == "piros"){
+            eredmeny = "eltaláltad";
+        }else{
+            eredmeny = "nem talált";
+        }
+        return eredmeny;
         
     }
 
@@ -70,6 +88,8 @@ public class CsigaversenyJatek {
     private void kiIr(String uzenet) {
         System.out.print(uzenet);
     }
+
+
     
     
 }
