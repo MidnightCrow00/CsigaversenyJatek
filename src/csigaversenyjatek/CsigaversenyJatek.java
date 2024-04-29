@@ -40,14 +40,14 @@ public class CsigaversenyJatek {
     private String fogadasEredmeny(String eredmeny) {
         String fogad = "";
         String eredemny = "";
-        if(fogad == "kek"){
-            eredmeny = "eltaláltad";
-        }else if(fogad == "zold"){
-            eredmeny = "eltaláltad";
-        }else if(fogad == "piros"){
-            eredmeny = "eltaláltad";
+        if(fogad == "k"){
+            eredmeny = "Eltaláltad ✔";
+        }else if(fogad == "z"){
+            eredmeny = "Eltaláltad ✔";
+        }else if(fogad == "p"){
+            eredmeny = "Eltaláltad ✔";
         }else{
-            eredmeny = "nem talált";
+            eredmeny = "Nem talált ❌";
         }
         return eredmeny;
         
