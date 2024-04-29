@@ -13,9 +13,10 @@ public class CsigaversenyJatek {
     }
     
     void start(){
+        String eredmeny = "";
         jatekKezdes();
         fogadasCsigara();
-        fogadasEredmeny(eredmeny, fogad);
+        kiIr(fogadasEredmeny(eredmeny));
         palya();
         gyorsitoKiszamol();
         gyorsitasAllito();
@@ -36,7 +37,9 @@ public class CsigaversenyJatek {
         return fogad;
     }
 
-    private String fogadasEredmeny(String eredmeny, String fogad) {
+    private String fogadasEredmeny(String eredmeny) {
+        String fogad = "";
+        String eredemny = "";
         if(fogad == "kek"){
             eredmeny = "eltaláltad";
         }else if(fogad == "zold"){
@@ -88,7 +91,6 @@ public class CsigaversenyJatek {
     private void kiIr(String uzenet) {
         System.out.print(uzenet);
     }
-
 
     
     
